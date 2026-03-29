@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyres — SKT Tyres</title>
+    <link rel="icon" href="images/SKT_logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+
+      <!-- NAVBAR -->
+      <header class="navbar">
+        <div class="container">
+          <a href="index.html" class="navbar__logo">
+            <img src="images/SKT_logo.png" alt="SKT Tyres">
+          </a>
+          <nav class="navbar__links">
+            <a href="index.html#brands">Brands</a>
+            <a href="index.html#categories">Categories</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+          </nav>
+          <a href="#" class="btn btn--primary">Sign In</a>
+        </div>
+      </header>
+
+      <!-- PAGE HEADER -->
+      <section class="listing-hero">
+        <div class="container">
+          <p class="section__label">SKT Tyres</p>
+          <h1 class="listing-hero__title">Tyre <span class="accent">Listings.</span></h1>
+          <p class="listing-hero__sub">Browse our full catalogue. Visit the store or call us to place your order.</p>
+        </div>
+      </section>
+
+      <!-- FILTERS + GRID -->
+      <section class="listing">
+        <div class="container listing__inner">
+
+          <!-- FILTERS SIDEBAR -->
+          <aside class="filters">
+            <p class="filters__heading">Filter By</p>
+
+            <div class="filter-group">
+              <p class="filter-group__label">Brand</p>
+              <label class="filter-option">
+                <input type="checkbox" value="bridgestone"> Bridgestone
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" value="jk"> JK Tyre
+              </label>
+            </div>
+
+            <div class="filter-group">
+              <p class="filter-group__label">Vehicle Type</p>
+              <label class="filter-option">
+                <input type="checkbox" value="cars"> Cars & SUVs
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" value="trucks"> Trucks & Commercial
+              </label>
+            </div>
+
+            <div class="filter-group">
+              <p class="filter-group__label">Size</p>
+              <label class="filter-option"><input type="checkbox" value="165/80R14"> 165/80 R14</label>
+              <label class="filter-option"><input type="checkbox" value="185/65R15"> 185/65 R15</label>
+              <label class="filter-option"><input type="checkbox" value="195/65R15"> 195/65 R15</label>
+              <label class="filter-option"><input type="checkbox" value="205/55R16"> 205/55 R16</label>
+              <label class="filter-option"><input type="checkbox" value="215/60R17"> 215/60 R17</label>
+              <label class="filter-option"><input type="checkbox" value="225/45R18"> 225/45 R18</label>
+              <label class="filter-option"><input type="checkbox" value="750R16"> 750 R16</label>
+              <label class="filter-option"><input type="checkbox" value="1000R20"> 1000 R20</label>
+            </div>
+
+            <button class="btn btn--outline" id="clearFilters">Clear Filters</button>
+          </aside>
+
+          <!-- TYRE GRID -->
+          <div class="tyre-grid" id="tyreGrid">
+            <div class="tyre-card" data-brand="bridgestone" data-vehicle="cars" data-size="185/65R15">
+            <img class="tyre-card__img" src="https://placehold.co/280x160/222228/888888?text=Tyre" alt="Tyre">
+            <div class="tyre-card__header">
+                <img class="tyre-card__logo" src="images/B-logo.png" alt="Bridgestone">
+                <span class="tyre-card__vehicle">Cars & SUVs</span>
+            </div>
+            <h3 class="tyre-card__model">Ecopia EP150</h3>
+            <p class="tyre-card__size">185/65 R15</p>
+            <p class="tyre-card__price">₹3,800</p>
+            <a href="index.html#contact" class="btn btn--primary">Enquire Now</a>
+            </div>
+
+            <div class="tyre-card" data-brand="bridgestone" data-vehicle="cars" data-size="195/65R15">
+            <img class="tyre-card__img" src="https://placehold.co/280x160/222228/888888?text=Tyre" alt="Tyre">
+            <div class="tyre-card__header">
+                <img class="tyre-card__logo" src="images/B-logo.png" alt="Bridgestone">
+                <span class="tyre-card__vehicle">Cars & SUVs</span>
+            </div>
+            <h3 class="tyre-card__model">Turanza T005</h3>
+            <p class="tyre-card__size">195/65 R15</p>
+            <p class="tyre-card__price">₹5,200</p>
+            <a href="index.html#contact" class="btn btn--primary">Enquire Now</a>
+            </div>
+
+            <div class="tyre-card" data-brand="bridgestone" data-vehicle="cars" data-size="205/55R16">
+            <img class="tyre-card__img" src="https://placehold.co/280x160/222228/888888?text=Tyre" alt="Tyre">
+            <div class="tyre-card__header">
+                <img class="tyre-card__logo" src="images/B-logo.png" alt="Bridgestone">
+                <span class="tyre-card__vehicle">Cars & SUVs</span>
+            </div>
+            <h3 class="tyre-card__model">Potenza Sport</h3>
+            <p class="tyre-card__size">205/55 R16</p>
+            <p class="tyre-card__price">₹7,400</p>
+            <a href="index.html#contact" class="btn btn--primary">Enquire Now</a>
+            </div>
+
+            <div class="tyre-card" data-brand="jk" data-vehicle="cars" data-size="165/80R14">
+            <img class="tyre-card__img" src="https://placehold.co/280x160/222228/888888?text=Tyre" alt="Tyre">
+            <div class="tyre-card__header">
+                <img class="tyre-card__logo" src="images/jk-logo.png" alt="JK Tyre">
+                <span class="tyre-card__vehicle">Cars & SUVs</span>
+            </div>
+            <h3 class="tyre-card__model">Taximaxx</h3>
+            <p class="tyre-card__size">165/80 R14</p>
+            <p class="tyre-card__price">₹2,900</p>
+            <a href="index.html#contact" class="btn btn--primary">Enquire Now</a>
+            </div>
+
+            <div class="tyre-card" data-brand="jk" data-vehicle="cars" data-size="215/60R17">
+            <img class="tyre-card__img" src="https://placehold.co/280x160/222228/888888?text=Tyre" alt="Tyre">
+            <div class="tyre-card__header">
+                <img class="tyre-card__logo" src="images/jk-logo.png" alt="JK Tyre">
+                <span class="tyre-card__vehicle">Cars & SUVs</span>
+            </div>
+            <h3 class="tyre-card__model">UX Royale</h3>
+            <p class="tyre-card__size">215/60 R17</p>
+            <p class="tyre-card__price">₹6,100</p>
+            <a href="index.html#contact" class="btn btn--primary">Enquire Now</a>
+            </div>
+
+            <div class="tyre-card" data-brand="bridgestone" data-vehicle="trucks" data-size="1000R20">
+            <img class="tyre-card__img" src="https://placehold.co/280x160/222228/888888?text=Tyre" alt="Tyre">
+            <div class="tyre-card__header">
+                <img class="tyre-card__logo" src="images/B-logo.png" alt="Bridgestone">
+                <span class="tyre-card__vehicle">Trucks</span>
+            </div>
+            <h3 class="tyre-card__model">R150</h3>
+            <p class="tyre-card__size">1000 R20</p>
+            <p class="tyre-card__price">₹18,500</p>
+            <a href="index.html#contact" class="btn btn--primary">Enquire Now</a>
+            </div>
+
+            <div class="tyre-card" data-brand="jk" data-vehicle="trucks" data-size="750R16">
+            <img class="tyre-card__img" src="https://placehold.co/280x160/222228/888888?text=Tyre" alt="Tyre">
+            <div class="tyre-card__header">
+                <img class="tyre-card__logo" src="images/jk-logo.png" alt="JK Tyre">
+                <span class="tyre-card__vehicle">Trucks</span>
+            </div>
+            <h3 class="tyre-card__model">Jumbo King</h3>
+            <p class="tyre-card__size">750 R16</p>
+            <p class="tyre-card__price">₹9,800</p>
+            <a href="index.html#contact" class="btn btn--primary">Enquire Now</a>
+            </div>
+          </div><!-- end tyre-grid -->
+
+        </div>
+      </section>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
