@@ -516,7 +516,6 @@ body {
   color: var(--color-gray);
   text-align: center;
 }
-
 /* ================================
    LISTING PAGE
    ================================ */
@@ -708,3 +707,4 @@ body {
   width: auto;
   object-fit: contain;
 }
+
