@@ -708,3 +708,55 @@ body {
   object-fit: contain;
 }
 
+/* ================================
+   MOBILE — max 768px
+   ================================ */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    min-height: 60vh;
+  }
+
+  .hero__title {
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
+  }
+
+  /* BRANDS */
+  .brands .container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .brands__cards {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .brand-card {
+    width: 100%;
+  }
+
+  /* CATEGORIES */
+  .categories__cards {
+    flex-direction: column;
+  }
+
+  /* LISTING PAGE */
+  .listing__inner {
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+    position: static;
+  }
+
+  /* FOOTER */
+  .footer__inner {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+}
+
