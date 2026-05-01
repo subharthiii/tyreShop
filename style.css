@@ -40,6 +40,84 @@ body {
   min-height: 100vh;
 }
 
+body.light-mode {
+  --color-bg:      #f0f0eb;
+  --color-bg-2:    #e2e2dc;
+  --color-white:   #111111;
+  --color-gray:    #444444;
+  --color-gray-lt: #333333;
+  --color-border:  rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .navbar {
+  background: rgba(240, 240, 235, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .navbar__links a {
+  color: #111111;
+}
+
+body.light-mode .navbar__links a:hover {
+  color: var(--color-amber);
+}
+
+body.light-mode .theme-toggle {
+  color: #111111;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .brand-card,
+body.light-mode .cat-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .footer {
+  background-color: #ddddd8;
+}
+
+body.light-mode .tyre-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .hero__title--white {
+  color: #f0f0f0;
+}
+
+body.light-mode .hero__subtitle {
+  color: rgba(240, 240, 240, 0.85);
+}
+
+body.light-mode .hero__badge {
+  color: var(--color-amber);
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-white);
+  font-size: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: 0.75rem;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-amber);
+}
+
 /* PAGE WRAPPER — caps total width */
 .page-wrapper {
   max-width: 1440px;
@@ -105,12 +183,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .navbar__logo {
   display: flex;
   align-items: center;
   text-decoration: none;
+  flex-shrink: 0;
+  margin-right: auto;
 }
 
 .navbar__logo img {
