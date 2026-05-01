@@ -13,6 +13,16 @@ if (navbar) {
   });
 }
 
+// HAMBURGER MENU
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.navbar__links');
+
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+}
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {

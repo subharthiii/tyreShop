@@ -96,6 +96,14 @@ body.light-mode .hero__badge {
   color: var(--color-amber);
 }
 
+body.light-mode .navbar__links.open {
+  background: rgba(240, 240, 235, 0.97);
+}
+
+body.light-mode .navbar__links a {
+  color: #111111;
+}
+
 .theme-toggle {
   background: none;
   border: 1px solid var(--color-border);
@@ -137,6 +145,49 @@ body.light-mode .hero__badge {
   color: var(--color-amber);
 }
 
+/* HAMBURGER - Menue */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar__links {
+    display: none;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    right: 0;
+    background: rgba(18, 18, 20, 0.97);
+    flex-direction: column;
+    padding: 1.5rem 2.5rem;
+    gap: 1.25rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .navbar__links.open {
+    display: flex;
+  }
+}
+
 /* ================================
    BUTTONS
    ================================ */
@@ -176,6 +227,7 @@ body.light-mode .hero__badge {
   background: rgba(18, 18, 20, 0.92);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border);
+  position: relative; 
 }
 
 .navbar .container {
