@@ -955,3 +955,54 @@ body.light-mode .navbar__links a {
     text-align: center;
   }
 }
+/* ABOUT SECTION */
+.about {
+  padding: 3rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.about__inner {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.about__text {
+  flex: 1;
+}
+
+.about__desc {
+  font-size: 0.88rem;
+  color: var(--color-gray-lt);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  max-width: 480px;
+}
+
+.about__stats {
+  display: flex;
+  gap: 2rem;
+  flex-shrink: 0;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat__number {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: var(--color-amber);
+  line-height: 1;
+}
+
+.stat__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+  margin-top: 0.25rem;
+}
