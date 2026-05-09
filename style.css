@@ -1006,3 +1006,179 @@ body.light-mode .navbar__links a {
   color: var(--color-gray);
   margin-top: 0.25rem;
 }
+
+/* ================================
+   ADMIN PAGE
+   ================================ */
+
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+}
+
+.login-box {
+  background: var(--color-bg-2);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.login-box__title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-top: 0.5rem;
+}
+
+.login-box__sub {
+  font-size: 0.85rem;
+  color: var(--color-gray-lt);
+  margin-bottom: 0.5rem;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.login-input {
+  width: 100%;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login-input:focus {
+  border-color: var(--color-amber);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.login-error {
+  font-size: 0.8rem;
+  color: #ef4444;
+  min-height: 1rem;
+}
+
+.admin-header {
+  background: var(--color-bg-2);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+}
+
+.admin-header .container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-header__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: var(--color-white);
+  flex: 1;
+}
+
+.admin-body {
+  padding: 3rem 2.5rem;
+}
+
+.admin-form {
+  background: var(--color-bg-2);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.admin-form__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-style: italic;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.admin-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.admin-listings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.admin-tyre-row {
+  background: var(--color-bg-2);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-tyre-row__info {
+  flex: 1;
+}
+
+.admin-tyre-row__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.admin-tyre-row__detail {
+  font-size: 0.8rem;
+  color: var(--color-gray-lt);
+}
+
+.btn--danger {
+  background: transparent;
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  font-size: 0.7rem;
+  padding: 0.4rem 0.85rem;
+}
+
+.btn--danger:hover {
+  background: rgba(239, 68, 68, 0.1);
+  transform: none;
+}

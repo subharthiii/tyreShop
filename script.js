@@ -53,11 +53,6 @@ if (themeToggle) {
   });
 }
 
-// ---- GOOGLE SHEETS INTEGRATION ----
-const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRUMRdqUqR1a-feYaBw_r_a3KByEeob9iRe85rLBKwReXvPHqz3PBtxGps1Y8ytCdxm6NapOdyA1GLC/pub?gid=0&single=true&output=csv';
-
-const grid = document.getElementById('tyreGrid');
-
 if (grid) {
   // Show loading state
   grid.innerHTML = `<p style="color:var(--color-gray-lt);font-size:0.9rem;">Loading tyres...</p>`;
