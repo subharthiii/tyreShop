@@ -34,21 +34,25 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
+
 // DARK / LIGHT MODE TOGGLE
 const themeToggle = document.getElementById('themeToggle');
+const moonIcon = document.getElementById('moonIcon');
+const sunIcon = document.getElementById('sunIcon');
 
 if (themeToggle) {
-  // Check if user already picked a theme last time
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light') {
     document.body.classList.add('light-mode');
-    themeToggle.textContent = '☀️';
+    moonIcon.style.display = 'none';
+    sunIcon.style.display = 'block';
   }
 
   themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('light-mode');
     const isLight = document.body.classList.contains('light-mode');
-    themeToggle.textContent = isLight ? '☀️' : '🌙';
+    moonIcon.style.display = isLight ? 'none' : 'block';
+    sunIcon.style.display = isLight ? 'block' : 'none';
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
   });
 }

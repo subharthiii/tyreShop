@@ -90,3 +90,25 @@ if (cat && checkboxes.length) {
 }
 
 loadTyres();
+
+// DARK / LIGHT MODE TOGGLE
+const themeToggle = document.getElementById('themeToggle');
+const moonIcon = document.getElementById('moonIcon');
+const sunIcon = document.getElementById('sunIcon');
+
+if (themeToggle) {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');
+    moonIcon.style.display = 'none';
+    sunIcon.style.display = 'block';
+  }
+
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    const isLight = document.body.classList.contains('light-mode');
+    moonIcon.style.display = isLight ? 'none' : 'block';
+    sunIcon.style.display = isLight ? 'block' : 'none';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+}
