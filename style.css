@@ -1182,3 +1182,7 @@ body.light-mode .navbar__links a {
   background: rgba(239, 68, 68, 0.1);
   transform: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -92,11 +92,13 @@ if (cat && checkboxes.length) {
 loadTyres();
 
 // DARK / LIGHT MODE TOGGLE
-const themeToggle = document.getElementById('themeToggle');
-const moonIcon = document.getElementById('moonIcon');
-const sunIcon = document.getElementById('sunIcon');
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.getElementById('themeToggle');
+  const moonIcon = document.getElementById('moonIcon');
+  const sunIcon = document.getElementById('sunIcon');
 
-if (themeToggle) {
+  if (!themeToggle) return;
+
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light') {
     document.body.classList.add('light-mode');
@@ -111,4 +113,4 @@ if (themeToggle) {
     sunIcon.style.display = isLight ? 'block' : 'none';
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
   });
-}
+});
