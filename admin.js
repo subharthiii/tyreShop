@@ -1,3 +1,4 @@
+import { GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 import { auth, db } from './firebase-config.js';
 import {
   signInWithEmailAndPassword,
@@ -19,6 +20,7 @@ const logoutBtn      = document.getElementById('logoutBtn');
 const loginError     = document.getElementById('loginError');
 const addTyreBtn     = document.getElementById('addTyreBtn');
 const adminListings  = document.getElementById('adminListings');
+
 
 // Check if already logged in
 onAuthStateChanged(auth, user => {
@@ -42,6 +44,20 @@ loginBtn.addEventListener('click', async () => {
     loginError.textContent = 'Wrong email or password.';
   }
 });
+
+// GOOGLE LOGIN
+const googleLoginBtn = document.getElementById('googleLoginBtn');
+const provider = new GoogleAuthProvider();
+
+if (googleLoginBtn) {
+  googleLoginBtn.addEventListener('click', async () => {
+    try {
+      await signInWithPopup(auth, provider);
+    } catch (err) {
+      loginError.textContent = 'Google sign in failed. Try again.';
+    }
+  });
+}
 
 // LOGOUT
 logoutBtn.addEventListener('click', () => signOut(auth));
