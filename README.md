@@ -6,6 +6,26 @@ A modern full-stack tyre retail management web application built for a physical 
 
 https://subharthiii.github.io/tyreShop/index.html
 
+## Screenshots
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Home Page 1
+<img width="1263" height="804" alt="Screenshot 2026-05-21 at 1 27 10 PM" src="https://github.com/user-attachments/assets/1d5b9453-4bb0-465b-aa98-ed7927b262bc" />
+### Home Page 2
+<img width="1274" height="801" alt="Screenshot 2026-05-21 at 1 27 36 PM" src="https://github.com/user-attachments/assets/05a9f83c-2d15-41fc-9e07-414153a61376" />
+### Home Page 3
+<img width="1268" height="804" alt="Screenshot 2026-05-21 at 1 28 02 PM" src="https://github.com/user-attachments/assets/7547a0dc-8d06-4ed2-8c0b-4f83c6f4e05b" />
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Dark mode
+<img width="385" height="493" alt="Screenshot 2026-05-22 at 1 22 02 PM" src="https://github.com/user-attachments/assets/9218fe45-08ee-45d6-89e2-bd27a597958e" />
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Admin panel
+<img width="1084" height="805" alt="Screenshot 2026-05-22 at 1 23 52 PM" src="https://github.com/user-attachments/assets/04e1fcf0-aef7-43a1-b6b4-fbcde190e188" />
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Listing Page
+<img width="1167" height="758" alt="Screenshot 2026-05-22 at 1 28 17 PM" src="https://github.com/user-attachments/assets/bf75818f-5619-4c4b-8710-2c87c96655da" />
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 ## Features
 
 ### Customer Features
@@ -40,7 +60,7 @@ https://subharthiii.github.io/tyreShop/index.html
 * Search and filtering
 * Pagination
 * Online booking system
-* Payment gateway integration
+* Payment gateway integration(I'm not sure about this). 
 
 ## Author
 
