@@ -47,7 +47,7 @@ https://subharthiii.github.io/tyreShop/index.html
 ### Customer Features
 
 * Browse tyre listings
-* View tyre details and stock status
+* View tyre details 
 * Responsive UI for mobile and desktop
 * Google Maps location integration
 * WhatsApp and phone contact integration
