@@ -32,7 +32,7 @@ https://subharthiii.github.io/tyreShop/index.html
 
 ### Listing Page
 
-<img width="1167" height="758" alt="Screenshot 2026-05-22 at 1 28 17 PM" src="https://github.com/user-attachments/assets/bf75818f-5619-4c4b-8710-2c87c96655da" />
+<img width="1427" height="879" alt="Screenshot 2026-05-25 at 12 15 14 AM" src="https://github.com/user-attachments/assets/c1706113-08d2-4659-8ae4-ecb70f1ca6df" />
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
