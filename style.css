@@ -227,7 +227,6 @@ body.light-mode .navbar__links a {
   background: rgba(18, 18, 20, 0.92);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border);
-  position: relative; 
 }
 
 .navbar .container {
@@ -1183,9 +1182,6 @@ body.light-mode .navbar__links a {
   transform: none;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 .stock-controls {
   display: flex;
   align-items: center;
