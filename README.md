@@ -26,7 +26,9 @@ https://subharthiii.github.io/tyreShop/index.html
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Admin panel
-<img width="1084" height="805" alt="Screenshot 2026-05-22 at 1 23 52 PM" src="https://github.com/user-attachments/assets/04e1fcf0-aef7-43a1-b6b4-fbcde190e188" />
+
+<img width="1210" height="878" alt="Screenshot 2026-05-25 at 12 22 47 AM" src="https://github.com/user-attachments/assets/97714150-46c8-493c-a521-460e2d2d4d68" />
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
