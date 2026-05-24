@@ -1186,3 +1186,35 @@ body.light-mode .navbar__links a {
 html {
   scroll-behavior: smooth;
 }
+.stock-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stock-btn {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-white);
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stock-btn:hover {
+  border-color: var(--color-amber);
+}
+
+.stock-count {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-white);
+  min-width: 24px;
+  text-align: center;
+}

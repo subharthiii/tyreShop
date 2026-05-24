@@ -10,29 +10,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   </head>
-
   <body>
     <div class="page-wrapper">
-
-        <!-- LOGIN SCREEN -->
-        <div class="login-screen" id="loginScreen">
-          <div class="login-box">
-            <img src="images/SKT_logo.png" alt="SKT Tyres" height="48">
-            <h1 class="login-box__title">Admin Login</h1>
-            <p class="login-box__sub">Only authorized staff can access this page.</p>
-
-            <div class="login-form">
-              <input type="email" id="emailInput" class="login-input" placeholder="Email address">
-              <input type="password" id="passwordInput" class="login-input" placeholder="Password">
-              <button class="btn btn--primary login-btn" id="loginBtn">Sign In</button>
-              <p class="login-error" id="loginError"></p>
-            </div>
+      <div class="login-screen" id="loginScreen">
+        <div class="login-box">
+          <img src="images/SKT_logo.png" alt="SKT Tyres" height="48">
+          <h1 class="login-box__title">Admin Login</h1>
+          <p class="login-box__sub">Only authorized staff can access this page.</p>
+          <div class="login-form">
+            <input type="email" id="emailInput" class="login-input" placeholder="Email address">
+            <input type="password" id="passwordInput" class="login-input" placeholder="Password">
+            <button class="btn btn--primary login-btn" id="loginBtn">Sign In</button>
+            <p class="login-error" id="loginError"></p>
           </div>
         </div>
+      </div>
 
-      <!-- ADMIN DASHBOARD — hidden until logged in -->
       <div class="admin-dashboard" id="adminDashboard" style="display:none;">
-
         <header class="admin-header">
           <div class="container">
             <img src="images/SKT_logo.png" alt="SKT Tyres" height="32">
@@ -45,31 +39,34 @@
           <h2 class="section__title">Manage <span class="accent">Listings.</span></h2>
           <p style="color:var(--color-gray-lt);margin-bottom:2rem;font-size:0.9rem;">Add, edit or delete tyre listings below.</p>
 
-          <!-- ADD TYRE FORM -->
           <div class="admin-form">
             <h3 class="admin-form__title">Add New Tyre</h3>
             <div class="admin-form__grid">
-              <input type="text" class="login-input" id="f-brand" placeholder="Brand (e.g. Bridgestone)">
-              <input type="text" class="login-input" id="f-brandKey" placeholder="Brand key (e.g. bridgestone)">
+              <select class="login-input" id="f-brandSelect">
+                <option value="">Select Brand</option>
+                <option value="bs">Bridgestone</option>
+                <option value="jk">JK Tyre</option>
+              </select>
+              <select class="login-input" id="f-vehicleSelect">
+                <option value="">Select Vehicle Type</option>
+                <option value="cars">Cars & SUVs</option>
+                <option value="trucks">Trucks & Commercial</option>
+              </select>
               <input type="text" class="login-input" id="f-model" placeholder="Model (e.g. Ecopia EP150)">
               <input type="text" class="login-input" id="f-size" placeholder="Size (e.g. 185/65 R15)">
-              <input type="text" class="login-input" id="f-vehicle" placeholder="Vehicle (e.g. Cars & SUVs)">
-              <input type="text" class="login-input" id="f-vehicleKey" placeholder="Vehicle key (e.g. cars)">
               <input type="text" class="login-input" id="f-price" placeholder="Price (e.g. ₹3800)">
-              <input type="text" class="login-input" id="f-imageUrl" placeholder="Image URL (optional)">
+              <input type="number" class="login-input" id="f-quantity" placeholder="Quantity in stock">
+              <input type="text" class="login-input" id="f-imageUrl" placeholder="Cloudinary Image URL (optional)" style="grid-column:span 2;">
             </div>
             <button class="btn btn--primary" id="addTyreBtn">Add Tyre</button>
             <p class="login-error" id="addError"></p>
           </div>
 
-          <!-- LISTINGS TABLE -->
           <div class="admin-listings" id="adminListings">
             <p style="color:var(--color-gray-lt);">Loading listings...</p>
           </div>
-
         </div>
       </div>
-
     </div>
     <script type="module" src="admin.js"></script>
   </body>

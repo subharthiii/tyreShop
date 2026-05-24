@@ -5,26 +5,25 @@ const grid = document.getElementById('tyreGrid');
 
 async function loadTyres() {
   grid.innerHTML = '<p style="color:var(--color-gray-lt);font-size:0.9rem;">Loading tyres...</p>';
-  
   const snapshot = await getDocs(collection(db, 'tyres'));
   grid.innerHTML = '';
 
   snapshot.forEach(docSnap => {
     const t = docSnap.data();
-    
-   const logoSrc = t.brandKey === 'bs'
-        ? 'images/B-logo.png'
-        : 'images/jk-logo.png';
 
-    const imageSrc = t.imageUrl
-      ? t.imageUrl
-      : 'https://placehold.co/280x160/222228/888888?text=Tyre';
+    const logoSrc = t.brandKey === 'bs' ? 'images/B-logo.png' : 'images/jk-logo.png';
+    const imageSrc = t.imageUrl || 'https://placehold.co/280x160/222228/888888?text=Tyre';
+
+    const qty = t.quantity ?? 99;
+    const statusColor = qty <= 0 ? '#ef4444' : qty <= 5 ? '#f59e0b' : '#22c55e';
+    const statusLabel = qty <= 0 ? 'Out of Stock' : qty <= 5 ? 'Low Stock' : 'In Stock';
 
     const card = document.createElement('div');
     card.className = 'tyre-card';
-    card.dataset.brand = t.brandKey;
+    card.dataset.brand   = t.brandKey;
     card.dataset.vehicle = t.vehicleKey;
-    card.dataset.size = t.size ? t.size.replace(/\s/g, '') : '';
+    card.dataset.size    = t.size ? t.size.replace(/\s/g, '') : '';
+    if (qty <= 0) card.style.opacity = '0.6';
 
     card.innerHTML = `
       <img class="tyre-card__img" src="${imageSrc}" alt="${t.model}">
@@ -35,7 +34,11 @@ async function loadTyres() {
       <h3 class="tyre-card__model">${t.model}</h3>
       <p class="tyre-card__size">${t.size}</p>
       <p class="tyre-card__price">${t.price}</p>
-      <a href="index.html#contact" class="btn btn--primary">Enquire Now</a>
+      <p style="font-size:0.75rem;font-weight:700;color:${statusColor};margin-bottom:0.5rem;">● ${statusLabel}</p>
+      ${qty <= 0
+        ? `<button class="btn btn--primary" disabled style="opacity:0.4;cursor:not-allowed;">Unavailable</button>`
+        : `<a href="index.html#contact" class="btn btn--primary">Enquire Now</a>`
+      }
     `;
 
     grid.appendChild(card);
@@ -44,7 +47,6 @@ async function loadTyres() {
   applyFilters();
 }
 
-// FILTERS
 const checkboxes = document.querySelectorAll('.filter-option input[type="checkbox"]');
 const clearBtn = document.getElementById('clearFilters');
 
@@ -69,9 +71,7 @@ function applyFilters() {
   });
 }
 
-if (checkboxes.length) {
-  checkboxes.forEach(cb => cb.addEventListener('change', applyFilters));
-}
+if (checkboxes.length) checkboxes.forEach(cb => cb.addEventListener('change', applyFilters));
 
 if (clearBtn) {
   clearBtn.addEventListener('click', () => {
@@ -80,13 +80,10 @@ if (clearBtn) {
   });
 }
 
-// Auto filter from URL
 const params = new URLSearchParams(window.location.search);
 const cat = params.get('cat');
 if (cat && checkboxes.length) {
-  checkboxes.forEach(cb => {
-    if (cb.value === cat) cb.checked = true;
-  });
+  checkboxes.forEach(cb => { if (cb.value === cat) cb.checked = true; });
 }
 
 loadTyres();
@@ -96,10 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('themeToggle');
   const moonIcon = document.getElementById('moonIcon');
   const sunIcon = document.getElementById('sunIcon');
-
   if (!themeToggle) return;
 
-  const savedTheme = localStorage.getItem('theme');
+  const savedTheme = localStorage.getItem('theme') ?? 'light';
   if (savedTheme === 'light') {
     document.body.classList.add('light-mode');
     moonIcon.style.display = 'none';
